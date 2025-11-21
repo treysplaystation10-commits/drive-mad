@@ -877,6 +877,28 @@ quit_(code,new ExitStatus(code))}
 if(Module["preInit"]){if(typeof Module["preInit"]=="function")Module["preInit"]=[Module["preInit"]];while(Module["preInit"].length>0){Module["preInit"].pop()()}}
 var shouldRunNow=true;if(Module["noInitialRun"])shouldRunNow=false;run();
     </script>
-  </body>
+  <script>
+    const fullscreenBtn = document.getElementById("fullscreenBtn");
+    const gameContainer = document.documentElement; // full page fullscreen
+</script>
+    <script>
+    const fullscreenBtn = document.getElementById("fullscreenBtn");
+    const gameContainer = document.documentElement; // full page fullscreen
+</script>
+
+<script>
+    const fullscreenBtn = document.getElementById("fullscreenBtn");
+    const gameContainer = document.documentElement; // full page fullscreen
+
+    fullscreenBtn.onclick = () => {
+        if (!document.fullscreenElement) {
+            gameContainer.requestFullscreen();
+        } else {
+            document.exitFullscreen();
+        }
+    };
+</script>
+</body>
+<button id="fullscreenBtn">Fullscreen</button>
 </html>
 <!-- Thanks EvilMonke#0263! -->
