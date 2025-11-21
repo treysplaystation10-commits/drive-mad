@@ -889,7 +889,7 @@ var shouldRunNow=true;if(Module["noInitialRun"])shouldRunNow=false;run();
 <body>
 
     <!-- Your game canvas -->
-    <canvas id="gameCanvas"></canvas>
+    <canvas id="gameCanvas" width="500" height="500"></canvas>
 
     <!-- Fullscreen button -->
     <button id="fullscreenBtn">Fullscreen</button>
@@ -898,7 +898,7 @@ var shouldRunNow=true;if(Module["noInitialRun"])shouldRunNow=false;run();
     <script src="mysketch.js"></script>
     <script>
         const fullscreenBtn = document.getElementById("fullscreenBtn");
-        const canvas = document.getElementById("gameCanvas"); // or use document.documentElement for full page
+        const canvas = document.getElementById("gameCanvas"); // full canvas fullscreen
 
         fullscreenBtn.onclick = () => {
             if (!document.fullscreenElement) {
@@ -912,5 +912,3 @@ var shouldRunNow=true;if(Module["noInitialRun"])shouldRunNow=false;run();
     </script>
 
 </body>
-</html>
-
