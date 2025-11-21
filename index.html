@@ -886,19 +886,31 @@ var shouldRunNow=true;if(Module["noInitialRun"])shouldRunNow=false;run();
     const gameContainer = document.documentElement; // full page fullscreen
 </script>
 
-<script>
-    const fullscreenBtn = document.getElementById("fullscreenBtn");
-    const gameContainer = document.documentElement; // full page fullscreen
+<body>
 
-    fullscreenBtn.onclick = () => {
-        if (!document.fullscreenElement) {
-            gameContainer.requestFullscreen();
-        } else {
-            document.exitFullscreen();
-        }
-    };
-</script>
+    <!-- Your game canvas -->
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Fullscreen button -->
+    <button id="fullscreenBtn">Fullscreen</button>
+
+    <!-- Scripts -->
+    <script src="mysketch.js"></script>
+    <script>
+        const fullscreenBtn = document.getElementById("fullscreenBtn");
+        const canvas = document.getElementById("gameCanvas"); // or use document.documentElement for full page
+
+        fullscreenBtn.onclick = () => {
+            if (!document.fullscreenElement) {
+                canvas.requestFullscreen().catch(err => {
+                    console.error("Fullscreen error:", err);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        };
+    </script>
+
 </body>
-<button id="fullscreenBtn">Fullscreen</button>
 </html>
-<!-- Thanks EvilMonke#0263! -->
+
