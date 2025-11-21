@@ -877,52 +877,6 @@ quit_(code,new ExitStatus(code))}
 if(Module["preInit"]){if(typeof Module["preInit"]=="function")Module["preInit"]=[Module["preInit"]];while(Module["preInit"].length>0){Module["preInit"].pop()()}}
 var shouldRunNow=true;if(Module["noInitialRun"])shouldRunNow=false;run();
     </script>
-  <script>
-    const fullscreenBtn = document.getElementById("fullscreenBtn");
-    const gameContainer = document.documentElement; // full page fullscreen
-</script>
-    <script>
-    const fullscreenBtn = document.getElementById("fullscreenBtn");
-    const gameContainer = document.documentElement; // full page fullscreen
-</script>
-
-<body>
-
-    <!-- Your game canvas -->
-    <canvas id="gameCanvas" width="500" height="500"></canvas>
-
-    <!-- Fullscreen button -->
-    <button id="fullscreenBtn">Fullscreen</button>
-
-    <!-- Scripts -->
-    <script src="mysketch.js"></script>
-    <script>
-        const fullscreenBtn = document.getElementById("fullscreenBtn");
-        const canvas = document.getElementById("gameCanvas"); // full canvas fullscreen
-
-        fullscreenBtn.onclick = () => {
-            if (!document.fullscreenElement) {
-                canvas.requestFullscreen().catch(err => {
-                    console.error("Fullscreen error:", err);
-                });
-            } else {
-                document.exitFullscreen();
-            }
-        };
-    </script>
-
-</body>
-<style>
-    #fullscreenBtn {
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        z-index: 9999;
-        padding: 10px 15px;
-        background: black;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-</style>
+  </body>
+</html>
+<!-- Thanks EvilMonke#0263! -->
